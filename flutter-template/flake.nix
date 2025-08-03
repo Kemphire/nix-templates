@@ -1,7 +1,7 @@
 {
   description = "flutter template for nix systems";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = {
