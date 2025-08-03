@@ -1,11 +1,7 @@
 {
-  description = "A very basic flake";
+  description = "nix templates for my day-to-day programming languages";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-  };
-
-  outputs = {self, ...}: {
+  outputs = {self}: {
     templates = {
       go = {
         path = ./go-template;
