@@ -10,10 +10,17 @@
       go = {
         path = ./go-template;
         description = "A starter go template";
+        welcomeText = ''
+          # You successfully created your go template
+        '';
       };
-      welcomText = ''
-        You successfully created your go template
-      '';
+      flutter = {
+        path = ./flutter-template;
+        description = "A painless flutter template";
+        welcomeText = ''
+          # you successfully create your flutter template
+        '';
+      };
     };
   };
 }
