@@ -44,11 +44,11 @@
         };
 
         androidSdk = androidComposition.androidsdk;
-      in {
-        devShell =
+
+        fhs =
           pkgs.buildFHSEnv
           {
-            name = "flutter-fhs";
+            name = "fhs";
 
             targetPkgs = pkgs:
               with pkgs; [
@@ -60,6 +60,8 @@
                 google-chrome
                 vulkan-loader
                 libGL
+                mesa-demos
+                fish
               ];
 
             # Runs every time you enter the env
@@ -82,8 +84,17 @@
               fi
             '';
 
-            runScript = "bash";
-          }.env;
+            runScript = "fish";
+          };
+      in {
+        devShell = pkgs.mkShell {
+          buildInputs = [fhs];
+        };
+
+        shellHook = ''
+          echo  "You are entering to a nix flutter environment, hurray"
+          fhs
+        '';
       }
     );
 }
