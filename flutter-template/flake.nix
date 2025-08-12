@@ -39,6 +39,7 @@
           ];
           abiVersions = ["x86_64"];
           includeNDK = true;
+          ndkVersions = ["26.3.11579264" "28.1.13356709" "27.0.12077973"];
           includeSystemImages = true;
           systemImageTypes = [
             "google_apis"
