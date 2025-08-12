@@ -17,6 +17,13 @@
           # you successfully create your flutter template
         '';
       };
+      rust = {
+        path = ./rust-template;
+        description = "Rust development environment nix flake";
+        welcomeText = ''
+          # Welcome **rustaceans**
+        '';
+      };
     };
   };
 }
