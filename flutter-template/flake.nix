@@ -117,13 +117,7 @@
           runScript = "fish";
         };
       in {
-        devShell = pkgs.mkShell {
-          buildInputs = [fhs];
-          shellHook = ''
-            echo "You are entering to a nix flutter environment, hurray"
-                  ${fhs}
-          '';
-        };
+        devShells.${system}.default = fhs.env;
       }
     );
 }
