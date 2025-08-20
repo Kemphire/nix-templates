@@ -23,7 +23,7 @@
 
         androidComposition = androidEnv.composeAndroidPackages {
           cmdLineToolsVersion = "8.0";
-          platformToolsVersion = "34.0.4";
+          platformToolsVersion = "34.0.5";
           buildToolsVersions = [
             "30.0.3"
             "33.0.2"
